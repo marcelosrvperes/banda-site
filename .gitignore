@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Builds
+dist/
+build/
