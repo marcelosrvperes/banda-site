@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Soundwave</title>
-  <meta name="description" content="Entre em contato conosco. Formulário de mensagens, email, WhatsApp e redes sociais da banda Soundwave.">
-  
+  <title>Contato - Os Pampeiros</title>
+  <meta name="description" content="Entre em contato com Os Pampeiros. Booking, parcerias e mensagens dos fãs.">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🎵</text></svg>">
 </head>
 <body>
-  <!-- HEADER E NAVEGAÇÃO -->
+  <!-- HEADER -->
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo">♪ SOUNDWAVE</a>
-      <button class="menu-toggle">
+      <a href="index.html" class="logo">♪ Os Pampeiros</a>
+      <button class="menu-toggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html">Início</a>
         <a href="integrantes.html">Integrantes</a>
         <a href="agenda.html">Agenda</a>
         <a href="galeria.html">Galeria</a>
@@ -29,11 +29,11 @@
     </div>
   </header>
 
-  <!-- HERO CONTATO -->
-  <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 8rem 2rem 4rem; text-align: center; margin-top: 60px;">
+  <!-- HERO -->
+  <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 8rem 2rem 4rem; text-align: center; margin-top: 60px; max-width: 100%; margin-left: 0; margin-right: 0;">
     <div class="container">
-      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Entre em Contato</h1>
-      <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9);">Queremos ouvir você! Envie uma mensagem e entraremos em contato em breve</p>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Fala com a banda</h1>
+      <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9);">Booking, parcerias ou só pra deixar um recado</p>
     </div>
   </section>
 
@@ -42,116 +42,93 @@
     <div class="container">
       <div class="contact-info">
         <div class="contact-item fade-in">
-          <div class="contact-item-icon">📧</div>
+          <div class="contact-item-icon">📸</div>
+          <h3>Instagram</h3>
+          <a href="https://instagram.com/ospampeiros" target="_blank" rel="noopener">@ospampeiros</a>
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">DM aberto pra contato</p>
+        </div>
+
+        <div class="contact-item fade-in">
+          <div class="contact-item-icon">✉️</div>
           <h3>Email</h3>
-          <a href="mailto:contato@soundwave.com">contato@soundwave.com</a>
-          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Responderemos em até 24h</p>
+          <a href="mailto:contato@ospampeiros.com.br">contato@ospampeiros.com.br</a>
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Atualize aqui o email real</p>
         </div>
-        
+
         <div class="contact-item fade-in">
-          <div class="contact-item-icon">📱</div>
-          <h3>WhatsApp</h3>
-          <a href="https://wa.me/5511999999999">(11) 9 9999-9999</a>
-          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Atendimento rápido</p>
-        </div>
-        
-        <div class="contact-item fade-in">
-          <div class="contact-item-icon">📍</div>
-          <h3>Localização</h3>
-          <p>São Paulo - SP<br>Brasil</p>
-          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Venha nos conhecer</p>
+          <div class="contact-item-icon">🎤</div>
+          <h3>Booking</h3>
+          <p>Eventos, festas, aniversários</p>
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 0.5rem;">Use o formulário abaixo</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE CONTATO -->
-  <section style="background: linear-gradient(180deg, rgba(26, 26, 46, 0.5), rgba(26, 26, 46, 0.8)); padding: 5rem 2rem;">
+  <!-- FORMULÁRIO -->
+  <section style="background: linear-gradient(180deg, rgba(26, 26, 46, 0.5), rgba(26, 26, 46, 0.8)); padding: 5rem 2rem; max-width: 100%; margin: 0;">
     <div class="container">
       <div style="max-width: 700px; margin: 0 auto;">
         <div class="section-subtitle">Envie sua mensagem</div>
-        <h2 class="section-title">Fale Conosco</h2>
-        
+        <h2 class="section-title">Deixa um recado</h2>
+
         <form class="contact-form card fade-in" style="margin-top: 2rem;">
           <div class="form-group">
             <label for="name">Nome *</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
           </div>
-          
+
           <div class="form-group">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
           </div>
-          
+
           <div class="form-group">
-            <label for="phone">Telefone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(11) 9 9999-9999">
+            <label for="phone">Telefone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="(00) 0 0000-0000">
           </div>
-          
+
           <div class="form-group">
-            <label for="subject">Assunto *</label>
-            <input type="text" id="subject" name="subject" placeholder="Assunto da sua mensagem" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="category">Categoria</label>
-            <select id="category" name="category" style="width: 100%; padding: 1rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-light); font-family: var(--font-primary); transition: all var(--transition-normal);">
-              <option value="" style="background: var(--primary); color: var(--text-light);">Selecione uma categoria</option>
-              <option value="shows" style="background: var(--primary); color: var(--text-light);">Informações sobre Shows</option>
-              <option value="booking" style="background: var(--primary); color: var(--text-light);">Booking / Apresentações</option>
-              <option value="press" style="background: var(--primary); color: var(--text-light);">Imprensa</option>
-              <option value="parcerias" style="background: var(--primary); color: var(--text-light);">Parcerias</option>
-              <option value="outro" style="background: var(--primary); color: var(--text-light);">Outro</option>
+            <label for="category">Assunto</label>
+            <select id="category" name="category" style="width: 100%; padding: 1rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-light); font-family: var(--font-primary);">
+              <option value="" style="background: var(--primary);">Selecione</option>
+              <option value="booking" style="background: var(--primary);">Quero contratar a banda</option>
+              <option value="parceria" style="background: var(--primary);">Parceria</option>
+              <option value="recado" style="background: var(--primary);">Só um recado</option>
+              <option value="outro" style="background: var(--primary);">Outro</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label for="message">Mensagem *</label>
-            <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui... (mínimo 10 caracteres)" required minlength="10"></textarea>
+            <textarea id="message" name="message" placeholder="Conta pra gente o que precisa..." required minlength="10"></textarea>
           </div>
-          
-          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: center;">
-            <input type="checkbox" id="agree" name="agree" required style="width: 20px; height: 20px; cursor: pointer;">
-            <label for="agree" style="margin: 0; color: rgba(255, 255, 255, 0.8); font-size: 0.95rem;">Concordo com a política de privacidade</label>
-          </div>
-          
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
-          
-          <p style="text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; margin-top: 1rem;">Seus dados serão mantidos em segurança</p>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem</button>
+
+          <p style="text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin-top: 1rem;">
+            ⚠️ Este formulário ainda não está conectado a um servidor — atualmente
+            ele só simula o envio. Para receber mensagens de verdade, conecte com
+            um serviço como Formspree, Netlify Forms ou similar.
+          </p>
         </form>
       </div>
     </div>
   </section>
 
   <!-- REDES SOCIAIS -->
-  <section style="padding: 5rem 2rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); text-align: center;">
+  <section style="padding: 5rem 2rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); text-align: center; max-width: 100%; margin: 0;">
     <div class="container">
-      <h2 class="section-title" style="color: white;">Nos Acompanhe</h2>
-      <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; margin-bottom: 3rem;">Fique atualizado com as últimas notícias, fotos e bastidores</p>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-        <a href="#" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 2rem; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; color: white;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
-          <h3 style="margin-bottom: 0.5rem;">Instagram</h3>
-          <p style="font-size: 0.9rem;">@soundwave</p>
-        </a>
-        
-        <a href="#" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 2rem; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; color: white;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">🎥</div>
-          <h3 style="margin-bottom: 0.5rem;">YouTube</h3>
-          <p style="font-size: 0.9rem;">SoundwaveTV</p>
-        </a>
-        
-        <a href="#" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 2rem; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; color: white;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">♪</div>
-          <h3 style="margin-bottom: 0.5rem;">Spotify</h3>
-          <p style="font-size: 0.9rem;">Soundwave</p>
-        </a>
-        
-        <a href="#" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 2rem; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; color: white;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">🎵</div>
-          <h3 style="margin-bottom: 0.5rem;">TikTok</h3>
-          <p style="font-size: 0.9rem;">@soundwave</p>
+      <h2 class="section-title" style="color: white;">Acompanhe a banda</h2>
+      <p style="color: rgba(255, 255, 255, 0.95); font-size: 1.05rem; margin-bottom: 2.5rem;">
+        Por enquanto estamos no Instagram. Em breve em outras plataformas.
+      </p>
+
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://instagram.com/ospampeiros" target="_blank" rel="noopener" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 14px; padding: 1.8rem 2.2rem; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.25); color: white; min-width: 200px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📸</div>
+          <h3 style="margin-bottom: 0.3rem;">Instagram</h3>
+          <p style="font-size: 0.9rem; opacity: 0.9;">@ospampeiros</p>
         </a>
       </div>
     </div>
@@ -161,54 +138,39 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Soundwave</h3>
-        <p>Banda musical moderna trazendo energia e arte para cada apresentação.</p>
+        <h3>Os Pampeiros</h3>
+        <p>Som, raiz e estrada — direto do pampa.</p>
         <div class="social-links" style="margin-top: 1.5rem;">
-          <a href="#" title="Instagram">📸</a>
-          <a href="#" title="YouTube">🎥</a>
-          <a href="#" title="Spotify">♪</a>
-          <a href="#" title="TikTok">🎵</a>
+          <a href="https://instagram.com/ospampeiros" target="_blank" rel="noopener" title="Instagram">📸</a>
         </div>
       </div>
-      
+
       <div class="footer-section">
         <h3>Menu</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="integrantes.html">Integrantes</a></li>
           <li><a href="agenda.html">Agenda</a></li>
           <li><a href="galeria.html">Galeria</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section">
         <h3>Contato</h3>
         <ul>
-          <li>📧 <a href="mailto:contato@soundwave.com">contato@soundwave.com</a></li>
-          <li>📱 WhatsApp: <a href="https://wa.me/5511999999999">(11) 9 9999-9999</a></li>
-          <li>📍 São Paulo - SP</li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Redes Sociais</h3>
-        <ul>
-          <li><a href="#">Instagram @soundwave</a></li>
-          <li><a href="#">YouTube SoundwaveTV</a></li>
-          <li><a href="#">Spotify Soundwave</a></li>
-          <li><a href="#">TikTok @soundwave</a></li>
+          <li>📸 <a href="https://instagram.com/ospampeiros" target="_blank" rel="noopener">@ospampeiros</a></li>
+          <li>✉️ <a href="contato.html">Fale com a banda</a></li>
         </ul>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Soundwave. Todos os direitos reservados. | Desenvolvido com ❤️</p>
+      <p>&copy; 2026 Os Pampeiros. Feito com ❤️ pela banda.</p>
     </div>
   </footer>
 
-  <!-- Botão Voltar ao Topo -->
-  <button class="scroll-top">↑</button>
+  <button class="scroll-top" aria-label="Voltar ao topo">↑</button>
 
   <script src="js/script.js"></script>
 </body>

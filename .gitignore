@@ -19,3 +19,7 @@ Thumbs.db
 # Builds
 dist/
 build/
+
+*.mp4
+
+imagens/

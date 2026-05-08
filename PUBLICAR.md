@@ -1,114 +1,128 @@
-## 📱 PUBLICAR O SITE - PASSO A PASSO
+# Site Os Pampeiros — Como Atualizar e Publicar
 
-Você precisa fazer 3 coisas em ordem:
+## Links do projeto
 
----
+| | Link |
+|---|---|
+| **Site ao vivo** | https://brilliant-selkie-2c7db8.netlify.app |
+| **GitHub** | https://github.com/marcelosrvperes/banda-site |
+| **Netlify** | https://app.netlify.com/projects/brilliant-selkie-2c7db8 |
 
-## PASSO 1️⃣: Criar Conta no GitHub (GRÁTIS)
-
-### Acesse github.com
-1. Abra o navegador: https://github.com
-2. Clique no botão **"Sign up"** (canto superior direito)
-3. Preencha com:
-   - **Email**: seu email (exemplo: seuemail@gmail.com)
-   - **Senha**: crie uma senha forte
-   - **Username**: escolha um nome (exemplo: ospampeiros)
-4. Clique **"Create account"**
-5. Confirme o email que será enviado
-
-### Criar o primeiro Repositório
-1. Depois de confirmado, clique no **"+"** (canto superior direito)
-2. Escolha **"New repository"**
-3. Preencha com:
-   - **Repository name**: `banda-site`
-   - **Description**: (opcional) "Site oficial de Os Pampeiros"
-   - **Public**: ✅ (deixe selecionado)
-4. Clique **"Create repository"**
-5. **Copie a URL que aparece** (será tipo: `https://github.com/SEUUSERNAME/banda-site.git`)
+> **Dica:** Você pode trocar o nome do site no Netlify para algo mais bonito.
+> No painel: **Site configuration → Site details → Change site name**
+> Sugestão: `ospampeiros` → ficaria `https://ospampeiros.netlify.app`
 
 ---
 
-## PASSO 2️⃣: Enviar o Site para GitHub
+## Como atualizar o site
 
-### Instale Git (se não tiver)
-1. Abra: https://git-scm.com/download/win
-2. Clique em "Download" (versão 64-bit)
-3. Execute o instalador, deixe as opções padrão
-
-### Enviar arquivos do site (no PowerShell)
-Abra o PowerShell **na pasta banda-site** e execute os comandos:
+Toda vez que mudar qualquer arquivo (HTML, CSS, JS, imagem), faça isso no PowerShell:
 
 ```powershell
-# Verificar se Git está instalado
-git --version
-
-# Entrar na pasta
 cd "g:\Meu Drive\00-2026\20-Banda\banda-site"
 
-# Iniciar Git
-git init
-
-# Configurar seu nome e email
-git config user.name "Seu Nome"
-git config user.email "seuemail@gmail.com"
-
-# Adicionar todos os arquivos
 git add .
-
-# Criar o primeiro commit
-git commit -m "Primeiro upload - Site Os Pampeiros"
-
-# Conectar com GitHub (USE A URL QUE VOCÊ COPIOU)
-git remote add origin https://github.com/SEUUSERNAME/banda-site.git
-
-# Enviar para GitHub
-git branch -M main
-git push -u origin main
-```
-
-**Resultado**: Seu site estará no GitHub!
-
----
-
-## PASSO 3️⃣: Criar Conta no Netlify (GRÁTIS)
-
-1. Abra: https://netlify.com
-2. Clique **"Sign up"** (canto superior direito)
-3. Escolha **"GitHub"** (para conectar)
-4. Autorize Netlify acessar seu GitHub
-5. Escolha **"banda-site"** na lista
-6. Clique **"Deploy site"**
-
-**Resultado**: Seu site estará ONLINE! 🎉
-- URL tipo: `https://seus-pampeiros-12345.netlify.app`
-- Sempre que fizer `git push`, atualiza automaticamente!
-
----
-
-## ✅ Pronto!
-
-Seu site estará em:
-- GitHub: https://github.com/SEUUSERNAME/banda-site
-- **SITE AO VIVO**: https://seus-pampeiros-12345.netlify.app
-
----
-
-## 🔄 Para Atualizar o Site (depois)
-
-Sempre que precisar atualizar:
-
-```powershell
-# 1. Edite os arquivos no VS Code
-# 2. Salve tudo
-# 3. No PowerShell:
-
-git add .
-git commit -m "Descrição da mudança"
+git commit -m "Descrição do que mudei"
 git push origin main
+```
 
-# Pronto! Em alguns segundos Netlify atualiza sozinho 🚀
+O Netlify detecta automaticamente o push e publica em menos de 1 minuto.
+
+---
+
+## O que editar para manter o site atualizado
+
+### Dados dos integrantes (bio, instrumento, foto)
+Arquivo: `js/integrantes-data.js`
+
+Cada integrante tem esse formato:
+```js
+{
+  nome: "Alze",
+  instrumento: "Vocal e Violão",
+  bio: "Texto de apresentação aqui.",
+  redes: { instagram: "https://instagram.com/ospampeiros" },
+  foto: "imagens/integrantes/Alze/20250824_161743.jpg"
+}
+```
+
+### Fotos do slideshow do hero (tela inicial)
+No mesmo arquivo `js/integrantes-data.js`, array `fotosHero`:
+```js
+const fotosHero = [
+  "imagens/banda/foto1.jpg",
+  "imagens/banda/foto2.jpg",
+  ...
+];
+```
+
+### Fotos do carrossel e da faixa rolante (marquee)
+Array `fotosBanda` no mesmo arquivo.
+
+### Fotos da galeria
+No arquivo `galeria.html`, os arrays:
+- `galeriaShows` — fotos de apresentações
+- `galeriaBastidores` — fotos de bastidores
+- `galeriaVideos` — arquivos .mp4
+
+### Adicionar uma nova foto
+1. Coloque o arquivo em `imagens/banda/` (ou subpasta adequada)
+2. Adicione o caminho no array correspondente em `js/integrantes-data.js` ou `galeria.html`
+3. Suba para o GitHub (o `git push` acima)
+
+### Adicionar um show na agenda
+Abra `agenda.html` e substitua o bloco de "Sem shows confirmados" pelo card do show:
+```html
+<div class="card event-card fade-in">
+  <div class="event-date">
+    <div class="day">15</div>
+    <div class="month">AGO</div>
+  </div>
+  <div class="event-info">
+    <h3>Nome do Evento</h3>
+    <p><strong>Local:</strong> Nome do local, Cidade - Estado</p>
+    <p><strong>Horário:</strong> 20:00</p>
+  </div>
+</div>
 ```
 
 ---
 
-**Precisa de ajuda em algum passo? Me avisa!** 💪
+## Estrutura das pastas
+
+```
+banda-site/
+├── index.html          ← Página inicial
+├── integrantes.html    ← Página dos integrantes
+├── agenda.html         ← Agenda de shows
+├── galeria.html        ← Galeria de fotos e vídeos
+├── contato.html        ← Formulário de contato
+├── css/
+│   └── style.css       ← Todos os estilos visuais
+├── js/
+│   ├── script.js       ← Slideshow, carrossel, lightbox, etc.
+│   └── integrantes-data.js ← DADOS DA BANDA (edite aqui)
+└── imagens/
+    ├── banda/          ← Fotos do grupo (shows, ensaios)
+    └── integrantes/    ← Uma foto por integrante
+        ├── Alze/
+        ├── Edu/
+        ├── Damião/
+        ├── Jones/
+        ├── Marcelo/
+        └── Tadeu/
+```
+
+---
+
+## Dúvidas frequentes
+
+**O site não atualizou depois do push?**
+Aguarde 1-2 minutos e recarregue. Se ainda não atualizou, vá em
+**Netlify → Deploys** e veja se aparece algum erro.
+
+**Esqueci o que mudar?**
+Abra o arquivo, salve com Ctrl+S, e o VS Code mostra as diferenças em azul na barra lateral.
+
+**Quero trocar o domínio para ospampeiros.com.br?**
+No Netlify: **Domain management → Add domain**. Compre o domínio em qualquer registradora (ex: registro.br) e aponte o DNS para o Netlify. Custa ~R$50/ano.
