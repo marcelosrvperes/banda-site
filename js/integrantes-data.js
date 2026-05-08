@@ -61,8 +61,8 @@ const integrantesData = [
     id: "tadeu",
     pasta: "Tadeu",
     nome: "Tadeu",
-    instrumento: "Convidado especial",
-    bio: "Participação especial nos ensaios e apresentações da banda.",
+    instrumento: "Guitarra",
+    bio: "Guitarrista de Os Pampeiros, trazendo melodia e pegada às apresentações da banda.",
     redes: {
       instagram: "https://instagram.com/ospampeiros"
     },
